@@ -126,11 +126,13 @@ h1{
 h2 {
     font-size: 1.5rem;
     
+    
 
 }
 
 h3 {
     font-size: 1.125 rem;
+    
 }
 
 .highlight {
@@ -262,21 +264,27 @@ nav {
 
 }
 
-nav a:focus, 
+
 nav a:hover {
+    
+    color:rgb(72, 26, 107);
+    
     text-transform: uppercase;
-    color:rgb(48, 16, 73);
-    background-color: rgb(244, 216, 155);
+    
+}
+nav a:focus{
+    text-decoration: line-through;
+    transform: rotate(5deg);
 }
 
 nav a:active{
-    color:rgb(57, 14, 90);
-    background-color: rgb(244, 216, 155);
-    border: 1px solid rgb(244, 216, 155);
-    text-decoration: line-through;
+    color:rgb(33, 1, 56);
     
+    text-transform: uppercase;
     
 }
+
+
 
 /*STYLE THE BUTTON*/
 
@@ -290,7 +298,7 @@ article button {
     font-family: ultra, Verdana, Tahoma, sans-serif;
     word-spacing: 2px;
     text-transform: uppercase;
-    font-size: 2rem;
+    font-size: 1.5rem;
     box-shadow: 5px 5px 4px -1px #888; 
 }
 /*FOOTER*/
