@@ -1,0 +1,308 @@
+/* TO GET AN IDEA OF THE CSS YOU WILL LIKELY BE USING, SEE THE LISTS BELOW. */
+
+        /* 
+        
+        Spacing 
+
+            - padding (shorthand and/or specific properties like padding-bottom, etc.)
+
+            - margin, (shorthand and/or specific properties like margin-top, etc.)
+
+            - letter-spacing, word-spacing, line-height
+
+            - width, max-width, min-width
+            - height, max-height, min-height
+
+        Typography 
+
+            - font-family, font-size, font-style, font-weight
+
+            - text-decoration, text-align
+
+            - color
+
+            - text-shadow, text-transform
+
+        Box, Layout and Border 
+
+            - border (shorthand and/or specific properties like border-top, border-bottom-radius, border-width, etc.)
+
+            - box-shadow
+
+            - display, float, align-items, align-content
+
+            - grid-template-columns, grid-column-gap
+
+            - transform
+
+        Other
+
+            - :nth()-child (to target specific child elements)
+
+            - :focus, :hover, :active (to target link states)
+
+            - @font-face or @import (to import typefaces)
+
+        */
+
+
+/* ------ START WRITING YOUR CODE BELOW ------ */
+/* IMPORTED FONTS */
+@font-face {
+    font-family: "mont";
+    src: url(../fonts/sans-serif/montserrat-regular.ttf) format("truetype");
+    font-weight: normal;
+    font-style:normal;
+}
+
+@font-face {
+    font-family: "open";
+    src: url(../fonts/sans-serif/opensans-regular.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "roz";
+    src: url(../fonts/serif/rozhaone-regular.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "robo";
+    src: url(../fonts/serif/robotoslab-regular.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "ultra";
+    src: url(../fonts/serif/ultra-regular.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "jose";
+    src: url(../fonts/serif/josefinslab-regular.ttf) format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*TYPOGRAPHY*/
+p {
+    font-family: open, Arial, Helvetica, sans-serif;
+    line-height: normal;
+}
+
+header {
+    padding: 0.5rem 0rem 0.5rem 0rem; 
+}
+
+nav {
+    font-family: mont;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    
+
+}
+
+h1,h2,h3,h4 {
+    font-family: robo, Arial, Helvetica, sans-serif;
+    letter-spacing: 0.0325rem;
+}
+
+h1{
+    text-align: center;
+    transform: rotate(-5deg);
+    font-size: 3.5rem;
+    letter-spacing: 0.25rem;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 2px gray;
+    
+}
+
+h2 {
+    font-size: 1.5rem;
+    
+
+}
+
+h3 {
+    font-size: 1.125 rem;
+}
+
+.highlight {
+    display: inline-block;
+    font-family: ultra, Verdana, Tahoma, sans-serif;
+    word-spacing: 2px;
+    border: 1px solid black; 
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.3rem;
+    border-top-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    color:rgb(244, 216, 155); 
+    background-color: rgb(57, 14, 90);
+    box-shadow: 5px 5px 4px -1px #888; 
+}
+
+/*GENERAL*/
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size:1rem;
+}
+
+body {
+    margin: 1.5rem auto;
+    width:90%;
+    min-width:56.25rem;
+}
+
+
+/*LAYOUT*/
+
+.main-section{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-gap: 1rem;
+    
+}
+
+
+article{
+    grid-column: 1 / 2;
+    grid-row: 1;  
+
+}
+
+aside{
+    grid-column: 2 / 3;
+    grid-row: 1;
+    border-left: 1px solid black; 
+    padding-top:0rem;
+    padding-left: 0.75rem;
+  
+}
+
+
+aside p {
+    border-bottom: 1px solid black;
+    padding-bottom: 0.75rem;
+    
+}
+
+aside h3:first-of-type,
+article p:first-of-type {
+    margin-top:0rem;
+}
+
+.expand {
+    display: block; 
+    grid-column: 2 / 3; 
+    font-size: 0.25rem;
+    margin: 0.5rem 0rem 1rem 0rem; 
+}
+
+.subsection {
+    display: flex;
+    margin: 3rem 0rem; 
+}
+
+/*IMAGES*/
+img {
+    width: 100%;
+}
+
+figure {
+    margin: 0px;
+}
+
+.article-image {
+    width: 33%;
+    float: left;
+    margin-right: 1rem; 
+    
+}
+
+
+.subsection figure {
+    margin: 0rem 0.25rem;
+    background-color: antiquewhite;
+
+}
+
+.subsection figcaption {
+    padding: 0.25rem 0.25rem;
+    font-family: open, Arial, Helvetica, sans-serif;
+}
+
+
+/*LINKS AND NAV*/
+
+a {
+    text-decoration: none;
+    color:#c1bbe4;
+}
+
+nav a {
+    display: inline-block;
+    padding: 1.25rem 2rem;
+    font-size: 1.75rem; 
+    font-family: robo, Verdana, Geneva, Tahoma, sans-serif; 
+    color: rgb(48, 16, 73); 
+}
+
+nav {
+    border-top: 1px solid #28234b;
+    border-bottom: 1px solid #28234b;
+
+}
+
+nav a:focus, 
+nav a:hover {
+    text-transform: uppercase;
+    color:rgb(48, 16, 73);
+    background-color: rgb(244, 216, 155);
+}
+
+nav a:active{
+    color:rgb(57, 14, 90);
+    background-color: rgb(244, 216, 155);
+    border: 1px solid rgb(244, 216, 155);
+    text-decoration: line-through;
+    
+    
+}
+
+/*STYLE THE BUTTON*/
+
+article button {
+    margin-top: 1rem;
+    border: 1px solid black; 
+    padding: 1rem 0.75rem;
+    border-radius: 0.3rem;
+    background-color:rgb(27, 40, 92);
+    color:antiquewhite; 
+    font-family: ultra, Verdana, Tahoma, sans-serif;
+    word-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 2rem;
+    box-shadow: 5px 5px 4px -1px #888; 
+}
+/*FOOTER*/
+footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    margin-top: 3rem;
+    padding-left: 0.75rem; 
+
+}
+.attribution {
+    text-align:right; 
+   
+    
+}
