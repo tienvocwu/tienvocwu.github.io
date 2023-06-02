@@ -268,19 +268,20 @@ nav {
 nav a:hover {
     
     color:rgb(72, 26, 107);
-    
     text-transform: uppercase;
     
 }
 nav a:focus{
-    text-decoration: line-through;
-    transform: rotate(5deg);
+    background-color: antiquewhite;
+    color:rgb(72, 26, 107);
+
 }
 
 nav a:active{
     color:rgb(33, 1, 56);
-    
-    text-transform: uppercase;
+    text-transform: capitalize;
+    text-decoration: line-through;
+    transform: rotate(5deg);
     
 }
 
